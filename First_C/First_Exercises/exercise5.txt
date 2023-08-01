@@ -1,0 +1,15 @@
+Which of the following are keywords in C?
+
+(a) for 
+(b) if
+(c) main
+(d) printf
+(e) while
+
+
+
+(c) main: This is not a keyword. It is the function where execution of a C program begins.
+
+(d) printf: This is not a keyword. It is a standard function provided by the C library to output data.
+
+others are keywords

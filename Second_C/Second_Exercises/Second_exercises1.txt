@@ -1,0 +1,35 @@
+What output do the following calls of printf produce?
+printf("%6d,%4d", 86, 1040);
+printf("12.5e", 30.253);
+printf("%.4f", 83.162);
+printf("%-6.2g", .0000009979);
+and reason
+
+printf("%6d,%4d", 86, 1040);
+The output is: 86,1040.
+
+The format specifier %6d tells printf to print an integer in a field of width 6. If the integer value has fewer digits than the field width, it will be right-justified, with leading spaces added. 86 only has two digits, so there will be four leading spaces. After the comma, the %4d specifier tells printf to print 1040 in a field of width 4, which fits perfectly with no additional spaces.
+
+printf("12.5e", 30.253);
+There seems to be a typo here. The format specifier e should be preceded by a % and have a number specifying the precision (like %.5e for example). If it's meant to be printf("%.5e", 30.253);, the output would be 3.02530e+01.
+
+The format specifier %.5e tells printf to print the float in scientific notation with five digits after the decimal point. The +01 at the end signifies that the decimal point should be moved one position to the right from the position indicated by the base number 3.02530 to get the original number, 30.253.
+
+printf("%.4f", 83.162);
+The output is: 83.1620.
+
+The format specifier %.4f tells printf to print the float to four decimal places. Since 83.162 only has three decimal places, a zero is added to meet the required four decimal places.
+
+printf("%-6.2g", .0000009979);
+The output is: 1e-06 .
+
+The format specifier %-6.2g tells printf to print the float in either decimal or exponential notation, whichever is more compact for the given number, with no more than two significant digits. The - in the format specifier is a flag that tells printf to left-justify the number in its field. The width of the field is specified as 6, so if the number requires fewer characters to print, the remaining positions to the right will be filled with spaces.
+
+Here, .0000009979 is more compactly expressed in exponential notation as 1e-06, which requires 5 characters to print. Since the field width is specified as 6, one space is added at the end to fill the field.
+
+
+
+    86,1040
+3.02530e+01
+83.1620
+1e-06 
