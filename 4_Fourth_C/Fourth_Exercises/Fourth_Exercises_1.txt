@@ -1,0 +1,52 @@
+
+
+*** 1 ***
+
+i = 10; j = 5;
+printf("%d", !i < j);
+
+The expression !i < j will first evaluate !i, which is the logical NOT of i. In C, the logical NOT operator (!) converts any non-zero value to 0 and zero to 1. Since i is 10, !i will evaluate to 0.
+
+Then, the expression becomes 0 < j, which is 0 < 5. This is a comparison operation that checks if 0 is less than 5, which is true. In C, true is represented as 1.
+
+So, the printf statement will print 1.
+
+int i = 10, j = 5;
+printf("%d", !i < j);  // This will print 1
+
+*** 2 ***
+
+i = 2;  j = 1;
+printf("%d", !!i + !j);
+
+The expression !!i + !j first evaluates the !!i and !j.
+
+!!i is the logical NOT (!) applied twice to i. This effectively converts any non-zero value to 1, and zero remains zero. Since i is 2, !!i will evaluate to 1.
+!j is the logical NOT of j. The logical NOT operator (!) converts any non-zero value to 0 and zero to 1. Since j is 1, !j will evaluate to 0.
+Then the expression becomes 1 + 0, which is 1.
+
+So, the printf statement will print 1.
+
+int i = 2, j = 1;
+printf("%d", !!i + !j);  // This will print 1
+
+*** 3 ***
+
+i = 1; j = 2; k = 3;
+printf("%d", i<j || k);
+
+The expression i<j || k is a logical OR (||) operation.
+
+The left side of the operation is i<j, which compares i and j. Since 1 < 2, this will evaluate to 1 (or true in Boolean logic).
+
+The right side of the operation is k, which is 3. In C, any non-zero number is treated as true in a Boolean context.
+
+The logical OR (||) operation will return true if either the left side or the right side is true.
+
+So, even though k (which is 3) would be considered true, the operation would already be determined by i<j (which is also true).
+
+So, the printf statement will print 1.
+
+
+int i = 1, j = 2, k = 3;
+printf("%d", i<j || k);  // This will print 1

@@ -1,0 +1,21 @@
+
+
+    The conditional operator consists of two symbols (? and :), which must be used together in the following way:
+
+                    /*                            expr1 ? expr2 : expr3                                  */
+
+
+
+    The conditional expression expr1 ? expr2 : expr3 should be read "if expr1 then expr2 else expr3."The expression
+    is evaluated in stages: expr1 is evaluated first; if its value isn't zero, then expr2 is evaluated, and its value
+    is the value of the entire conditional expression.If the value of expr1 is zero, then the value of expr3 is the value
+    of the conditional.
+        The following example illustrates the conditional operator:
+
+    
+    int i,j,k;
+
+    i = 1;
+    j = 2;
+    k = i > j ? i : j;     /* k is now 3 */
+    k = (i >= 0 ? i : 0) + j; /* k is now 3 */
